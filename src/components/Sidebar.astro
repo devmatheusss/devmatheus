@@ -1,0 +1,80 @@
+---
+import { Github, Linkedin, Instagram, Twitter } from "lucide-astro";
+---
+
+<aside
+  class="bg-neutral-800 rounded-2xl h-[500px] w-14 hover:w-[200px] transition-all"
+>
+  <ul class="flex flex-col items-center py-5 px-4 gap-4">
+    <li>
+      <a
+        class="group"
+        href="https://github.com/MatheusMA678"
+        rel="external"
+        target="_blank"
+      >
+        <Github
+          size={24}
+          class="group-hover:text-gray-300 transition shrink-0"
+        />
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a
+        class="group"
+        href="https://linkedin.com/in/matheus-mattos-avelino"
+        rel="external"
+        target="_blank"
+      >
+        <Linkedin
+          size={24}
+          class="group-hover:text-blue-600 transition shrink-0"
+        />
+        LinkedIn
+      </a>
+    </li>
+    <li>
+      <a
+        class="group"
+        href="https://instagram.com/matheus_mattos_avelino"
+        rel="external"
+        target="_blank"
+      >
+        <Instagram
+          size={24}
+          class="group-hover:text-pink-600 transition shrink-0"
+        />
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a
+        class="group"
+        href="https://twitter.com/MatheusMA678"
+        rel="external"
+        target="_blank"
+      >
+        <Twitter
+          size={24}
+          class="group-hover:text-blue-400 transition shrink-0"
+        />
+        Twitter
+      </a>
+    </li>
+  </ul>
+</aside>
+
+<style>
+  ul {
+    @apply overflow-hidden;
+  }
+
+  li {
+    @apply block w-full;
+  }
+
+  a {
+    @apply flex items-center gap-4 w-full;
+  }
+</style>

@@ -20,6 +20,7 @@ export default {
       keyframes: {
         fadeIn: {
           from: {
+            transform: "translateX(-20px)",
             opacity: 0
           }
         }

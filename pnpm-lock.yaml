@@ -23,6 +23,9 @@ dependencies:
   astro:
     specifier: ^4.4.4
     version: 4.4.4(typescript@5.3.3)
+  lucide-astro:
+    specifier: ^0.341.0
+    version: 0.341.0(astro@4.4.4)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -2200,6 +2203,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-astro@0.341.0(astro@4.4.4):
+    resolution: {integrity: sha512-kpVxYtN3zuep0HWeaKL8yvJ+M9fHXzPJ6QTQKc/sLgI5DEygbvfnIuHpUycJ/bfXIGpZSlT9b5TfyGEY9RsOmQ==}
+    peerDependencies:
+      astro: '>=2.7.1'
+    dependencies:
+      astro: 4.4.4(typescript@5.3.3)
     dev: false
 
   /magic-string@0.30.7:

@@ -1,18 +1,38 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-import WavingHand from "../assets/waving-hand.png";
+import Layout from "../layouts/Layout.astro";
+import Tech from "../components/Tech.astro";
+
+const techs = [
+  "JavaScript",
+  "TypeScript",
+  "C#",
+  "Java",
+  "Python",
+  "TailwindCSS",
+  "ReactJS",
+  "NextJS",
+  "AstroJS",
+  "styled-components",
+];
 ---
 
 <Layout title="Welcome">
   <main class="flex flex-col gap-8">
     <div class="flex items-center gap-2">
-      <div class="rounded-full size-9 bg-neutral-700"></div>
+      <Image
+        src="/matheus.jpeg"
+        alt="Matheus's avatar"
+        width={36}
+        height={36}
+        loading="eager"
+        class="rounded-full size-9 bg-neutral-700 object-cover"
+      />
 
       <div class="flex flex-col gap-1">
-        <strong class="font-mono font-bold text-lg leading-none"
-          >devmatheus</strong
+        <strong class="font-heading font-bold text-lg leading-none"
+          >Matheus Mattos Avelino</strong
         >
         <span class="text-xs text-neutral-300 leading-none"
           >Full-Stack Developer</span
@@ -20,15 +40,45 @@ import WavingHand from "../assets/waving-hand.png";
       </div>
     </div>
 
-    <section class="grid grid-cols-2 grid-rows-2 gap-4 flex-1">
-      <div class="row-span-2 rounded-2xl bg-neutral-800 p-4">
+    <section class="grid grid-cols-2 gap-4 flex-1">
+      <div class="flex flex-col gap-4">
         <div class="flex items-center gap-2 animate-fadeIn">
-          <h1 class="font-heading text-5xl leading-none">Hello!</h1>
-          <img src={WavingHand.src} alt="waving hand" class="size-14" />
+          <h1 class="font-heading text-4xl leading-none">Hello! 👋</h1>
+        </div>
+
+        <div class="rounded-2xl bg-neutral-800 p-4 flex-1 flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <strong class="font-heading text-lg leading-none"
+              >About me 🧑‍💻</strong
+            >
+            <p class="leading-relaxed text-sm">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              quidem, itaque ut omnis molestiae nam quis laboriosam, vero nemo
+              quas quia laborum dignissimos quam illo provident eos, error
+              aspernatur nulla?
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <strong class="font-heading text-lg leading-none">Techs 🚀</strong>
+            <ul class="flex flex-wrap gap-2">
+              {
+                techs.map((tech) => {
+                  return (
+                    <li class="px-2 py-1 rounded text-xs font-medium bg-neutral-700">
+                      {tech}
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="rounded-2xl bg-neutral-800"></div>
-      <div class="rounded-2xl bg-neutral-800"></div>
+      <div class="flex flex-col gap-4">
+        <h2 class="text-4xl font-heading leading-none">Projects</h2>
+        <div class="rounded-2xl bg-neutral-800 flex-1"></div>
+      </div>
     </section>
   </main>
 </Layout>

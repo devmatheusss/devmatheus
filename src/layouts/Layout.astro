@@ -3,6 +3,8 @@ import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/poppins/600.css";
 
+import Sidebar from "../components/Sidebar.astro";
+
 interface Props {
   title: string;
 }
@@ -20,8 +22,10 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} - devmatheus</title>
   </head>
-  <body>
-    <aside class="rounded-full bg-neutral-800 h-[500px]"></aside>
+  <body
+    class="container h-screen bg-neutral-900 text-neutral-100 grid grid-cols-[auto_1fr] place-content-center gap-x-8"
+  >
+    <Sidebar />
     <slot />
   </body>
 </html>
@@ -32,10 +36,6 @@ const { title } = Astro.props;
   @layer base {
     * {
       @apply border-neutral-500;
-    }
-
-    body {
-      @apply container h-screen bg-neutral-900 text-neutral-100 grid grid-cols-[64px_1fr] place-content-center gap-x-8;
     }
   }
 </style>
